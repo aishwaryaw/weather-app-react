@@ -1,0 +1,129 @@
+.content{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+    border : 1px solid white;
+    background-color: #282c34;
+    max-height: 400px;
+    overflow-y : scroll;
+}
+
+/* Scrollbar width */
+.content::-webkit-scrollbar {
+    width: 8px;
+  }
+
+.content::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+}
+       
+/* Scrollbar Handle */
+.content::-webkit-scrollbar-thumb {
+    background: grey; 
+    border-radius: 10px;
+}
+      
+/* Handle on hover */
+.content::-webkit-scrollbar-thumb:hover {
+    background: grey;
+}
+
+
+.content__row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.5px solid gray;
+}
+
+.row__col-1{
+    flex: 0.3;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.row__col-2{
+    flex: 0.6;
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+}
+
+.row__col-2 > p {
+    margin-left: 10px;
+    margin-bottom: 1px;
+    font-size: 10px;
+}
+
+.row__col-3{
+    flex: 0.1;
+    margin-right: 40px;
+}
+
+@media screen and (max-width: 450px) {
+    .content__row {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .row__col1, .row__col-2, .row__col-3{
+        margin-left: auto;
+        margin-right: auto;   
+    }
+
+    .row__col-1{
+        margin-top: 10px;
+        font-size: 12px;
+    }
+
+    .row__col-2{
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .row__col-2 > h2{
+        margin-top: -10px;
+    } 
+
+    .row__col-2 >p {
+        margin-top: -10px;
+    }
+
+    .row__col-3{
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+  
+      
+}
+
+
+/* Responsive design for smaller screen sizes */
+
+@media only screen and (max-width: 850px) {
+    .content__row{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .row__col1, .row__col-2, .row__col-3{
+        margin-left: auto;
+        margin-right: auto;   
+    }
+
+    .row__col-1{
+        margin-top: 10px;
+    }
+    .row__col-3{
+        margin-bottom: 15px;
+    }
+  
+    }

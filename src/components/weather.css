@@ -1,0 +1,229 @@
+.container {
+    margin-top: 20px;
+    width: 60%;
+}
+
+.container__input-container{
+    padding : 10px;
+    position : sticky;
+    z-index :100;
+    margin-bottom: 50px;
+}
+
+.container__main{
+    padding: 10px;
+    text-align: center;
+}
+
+.main__current{
+    display: flex;
+    order: 5;
+    border : 1px solid white;   
+    background-color: #282c34;
+    padding: 20px;
+}
+
+.temp-info__actual-temp{
+    font-size: 80px;
+    font-weight: 500;
+}
+
+.current__condition-info{
+    flex-grow: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 70px;
+    text-align: left;
+
+}
+
+.condition-info__condition{
+    font-size: large;
+    font-weight: 200;
+    border-bottom: 1px solid white;
+}
+
+.current__icon-info{
+    align-self: center;
+}
+
+.container__selection{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 30px;
+}
+
+.container__selection > button{
+    border: none;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px 10px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+    border-radius: 5px;
+}
+    
+          
+.container__selection > button:hover {
+    background-color: #555555;
+    color: white;
+}
+
+.container__selection > .selectedButton{
+    background-color: rgba(0, 0, 0, 0.699);
+    color: white;
+    border: 1px solid white;
+}
+
+.main__spin {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(255, 255, 255, .3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+    -webkit-animation: spin 1s ease-in-out infinite;
+  }
+  @keyframes spin {
+    to {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+  @-webkit-keyframes spin {
+    to {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+
+
+.ap-icon-clear{
+    display: none;
+}
+
+.ap-footer svg {
+    display: inline;
+  }
+
+.ap-name{
+    color: black;
+}
+  
+.ap-suggestion-icon svg {
+   display: inline-block;
+    margin-top: 3px;
+  }
+
+
+/* Responsive design for smaller screen sizes */
+
+@media screen and (max-width:500px) {
+    .temp-info__actual-temp{
+        text-align: center;
+        font-size: 50px;
+        margin-top: 10px;
+    }
+
+    .temp-info__feels-temp{
+        margin-top: 10px;
+    }
+
+    .current__condition-info{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-bottom: 20px;
+    }
+
+    .current__condition-info >.condition-info__condition{
+        font-size: 15px;
+    }
+
+    .current__condition-info> .condition-info__location{
+        font-size: 12px;
+    }
+
+    .condition-info__location > p{
+        border-right: 1px solid white;
+        margin-top: 1px;
+
+    }
+
+    .current__icon-info{
+        margin-top: 20px;
+    }
+
+
+}
+
+@media only screen and (max-width: 850px) {
+
+    .container > p{
+        text-align: center;
+    }
+
+    .container__selection{
+        grid-template-columns: 1fr;
+    }
+
+    .main__current{
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .current__condition-info{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        text-align: center;   
+    }
+
+    .condition-info__condition{
+        border-bottom: none;
+        padding: 5px;
+    }
+
+
+    .condition-info__location > p{
+        border-left: 1px solid white;
+        padding: 5px;
+
+    }
+
+    .current__icon-info{
+        margin-top: 5px;
+    }
+
+    
+    .ap-suggestion{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items:center;
+        align-items: center;
+        height: fit-content;
+    }
+
+    .em{
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .ap-address{
+        font-size: 10px;
+        text-align: center;
+        
+    }
+
+ 
+}
