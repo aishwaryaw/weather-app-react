@@ -176,7 +176,7 @@ function Weather() {
                 $address.textContent = 'none';
                 setLocation({});
         
-            }
+            })
         }
         
             function error() {
