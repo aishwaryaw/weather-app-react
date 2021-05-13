@@ -170,7 +170,13 @@ function Weather() {
 
                
         
-            })
+            }). catch (error => {
+                setInvalidLocation(true);
+                console.log(error);
+                $address.textContent = 'none';
+                setLocation({});
+        
+            }
         }
         
             function error() {
@@ -260,8 +266,19 @@ function Weather() {
 
                 setHourlyTemperatures(hourlyArr)
             
-        })
-    }
+        }).catch (error => {
+                 setLoading(falae);
+
+                setInvalidLocation(true);
+
+                console.log(error);
+
+                $address.textContent = 'none';
+
+                setLocation({});
+            })
+       }
+    
 
     // For toggling between current, daily and houly temperatures
     const changeType = (e) => {
